@@ -1,0 +1,36 @@
+version: '3.3'
+services:
+  client1:
+    environment:
+      - GET_HOSTS_FROM=dns
+    image: "codesmill:latest"
+    build:
+      context: .
+    working_dir: /app
+    command: /bin/bash -c "fedn run client -in client.yaml --name fabiano"
+    volumes:
+      - ./data/fabiano:/app/data
+      - ./client.yaml:/app/client.yaml
+  client2:
+    environment:
+      - GET_HOSTS_FROM=dns
+    image: "codesmill:latest"
+    build:
+      context: .
+    working_dir: /app
+    command: /bin/bash -c "fedn run client -in client.yaml --name fontana"
+    volumes:
+      - ./data/fontana:/app/data
+      - ./client.yaml:/app/client.yaml
+
+  client3:
+    environment:
+      - GET_HOSTS_FROM=dns
+    image: "codesmill:latest"
+    build:
+      context: .
+    working_dir: /app
+    command: /bin/bash -c "fedn run client -in client.yaml --name khaled"
+    volumes:
+      - ./data/khaled:/app/data
+      - ./client.yaml:/app/client.yaml

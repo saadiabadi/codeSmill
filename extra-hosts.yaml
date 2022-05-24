@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+   client1:
+     extra_hosts:
+        combiner: 130.238.29.60
+   client2:
+     extra_hosts:
+        combiner: 130.238.29.60
+   client3:
+     extra_hosts:
+       combiner: 130.238.29.60
