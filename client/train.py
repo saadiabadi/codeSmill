@@ -3,10 +3,11 @@ import sys
 import tensorflow as tf
 
 import yaml
-from read_data import read_data
 from fedn.utils.kerashelper import KerasHelper
-from models.casa_model import create_seed_model
-
+from models.csd_model import create_seed_model
+import pandas as pd
+from sklearn.model_selection import train_test_split
+import numpy as np
 
 from ttictoc import tic,toc
 import threading
@@ -15,97 +16,23 @@ from datetime import datetime
 
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
+def read_data(filename):
 
 
-# #################################################################################
-# #################### Resources monitoring
-#
-# def get_cpu_usage_pct():
-#     """
-#     Obtains the system's average CPU load as measured over a period of 500 milliseconds.
-#     :returns: System CPU load as a percentage.
-#     :rtype: float
-#     """
-#     return psutil.cpu_percent(interval=0.1)
-#
-# def get_cpu_frequency():
-#     """
-#     Obtains the real-time value of the current CPU frequency.
-#     :returns: Current CPU frequency in MHz.
-#     :rtype: int
-#     """
-#     return int(psutil.cpu_freq().current)
-#
-# def get_ram_usage():
-#     """
-#     Obtains the absolute number of RAM bytes currently in use by the system.
-#     :returns: System RAM usage in bytes.
-#     :rtype: int
-#     """
-#     return int(psutil.virtual_memory().total - psutil.virtual_memory().available)
-#
-# def get_ram_total():
-#     """
-#     Obtains the total amount of RAM in bytes available to the system.
-#     :returns: Total system RAM in bytes.
-#     :rtype: int
-#     """
-#     return int(psutil.virtual_memory().total)
-#
-# def get_ram_usage_pct():
-#     """
-#     Obtains the system's current RAM usage.
-#     :returns: System RAM usage as a percentage.
-#     :rtype: float
-#     """
-#     return psutil.virtual_memory().percent
-#
-# def ps_util_monitor(round):
-#     global running
-#     running = True
-#     cpu_P = []
-#     cpu_f = []
-#     memo_u = []
-#     memo_T = []
-#     memo_P = []
-#     time_ = []
-#     report = {}
-#     # start loop
-#     while running:
-#         cpu_P.append(get_cpu_usage_pct())
-#         cpu_f.append(get_cpu_frequency())
-#         memo_u.append(int(get_ram_usage() / 1024 / 1024))
-#         memo_T.append(int(get_ram_total() / 1024 / 1024))
-#         memo_P.append(get_ram_usage_pct())
-#
-#     report['round'] = round
-#     report['cpu_p'] = cpu_P
-#     report['cpu_f'] = cpu_f
-#     report['memory_u'] = memo_u
-#     report['memory_t'] = memo_T
-#     report['memory_p'] = memo_P
-#
-#     with open('/app/resources.txt', '+a') as f:
-#         print(report, file=f)
-#
-#
-# #################################################################################
-#
-#
-# def start_monitor(round):
-#     global t
-#     # create thread and start it
-#     t = threading.Thread(target=ps_util_monitor, args=[round])
-#     t.start()
-#
-#
-# def stop_monitor():
-#     global running
-#     global t
-#     # use `running` to stop loop in thread so thread will end
-#     running = False
-#     # wait for thread's end
-#     t.join()
+    print("-- START READING DATA --")
+
+    pkd = np.array(pd.read_csv(filename))
+    print(pkd.shape)
+    x = pkd[:, :16]
+    y = pkd[:, 16:]
+    # _, X, _, Y  = train_test_split(x, y,test_size=settings['test_size'])
+
+    # reshaped the input data for LSTM model
+    # X = X.reshape(X.shape[0], 1, X.shape[1])
+    x = x.reshape(x.shape[0], 1, x.shape[1])
+
+    return x, y
+
 
 def train(model,data, settings):
     """
@@ -115,16 +42,8 @@ def train(model,data, settings):
     print("-- RUNNING TRAINING --", flush=True)
     x_train, y_train = read_data(data)
 
-    # start_monitor(round)
-    # tic()
-    model.fit(x_train, y_train, epochs=settings['epochs'], batch_size=settings['batch_size'], verbose=True)
 
-    # elapsed = toc()
-    #
-    # stop_monitor()
-    #
-    # with open('/app/time.txt', '+a') as f:
-    #     print(elapsed, file=f)
+    model.fit(x_train, y_train, epochs=settings['epochs'], batch_size=settings['batch_size'], verbose=True)
 
     print("-- TRAINING COMPLETED --", flush=True)
     return model

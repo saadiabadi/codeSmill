@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="767ce94e-3821-43bf-b284-0b3d6a615822" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/init_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/models/casa_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/csd_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/read_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/validate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initial_model/initial_model.npz" beforeDir="false" afterPath="$PROJECT_DIR$/initial_model/initial_model.npz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package/package.tar.gz" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="29cH8AQlbEYE3004Kg9SpdAZTSd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/models" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/models" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="767ce94e-3821-43bf-b284-0b3d6a615822" name="Default Changelist" comment="" />
+      <created>1653405293551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653405293551</updated>
+      <workItem from="1653405297191" duration="51000" />
+      <workItem from="1653462206051" duration="676000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

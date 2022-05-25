@@ -3,11 +3,29 @@ import tensorflow as tf
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 import tensorflow.keras as keras
 import tensorflow.keras.models as krm
-from read_data import read_data
+
 import json
 from sklearn import metrics
+import pandas as pd
+from sklearn.model_selection import train_test_split
 import numpy as np
 
+def read_data(filename):
+
+
+    print("-- START READING DATA --")
+
+    pkd = np.array(pd.read_csv(filename))
+    print(pkd.shape)
+    x = pkd[:, :16]
+    y = pkd[:, 16:]
+    # _, X, _, Y  = train_test_split(x, y,test_size=settings['test_size'])
+
+    # reshaped the input data for LSTM model
+    # X = X.reshape(X.shape[0], 1, X.shape[1])
+    x = x.reshape(x.shape[0], 1, x.shape[1])
+
+    return x, y
 
 def validate(model,data):
     print("-- RUNNING VALIDATION --", flush=True)
@@ -37,7 +55,7 @@ def validate(model,data):
 if __name__ == '__main__':
 
     from fedn.utils.kerashelper import KerasHelper
-    from models.casa_model import create_seed_model
+    from models.csd_model import create_seed_model
 
     helper = KerasHelper()
     weights = helper.load_model(sys.argv[1])

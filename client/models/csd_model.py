@@ -15,7 +15,7 @@ def create_seed_model():
     model.add(tensorflow.keras.layers.Dense(50, activation='relu'))
     model.add(tensorflow.keras.layers.Dense(36, activation='relu'))
     model.add(tensorflow.keras.layers.Dense(28, activation='relu'))
-    model.add(Dense(10, activation='softmax'))
+    model.add(Dense(2, activation='softmax'))
     model.compile(loss=tensorflow.keras.losses.categorical_crossentropy,
                   optimizer=tensorflow.keras.optimizers.Adam(),
                   metrics=['accuracy'])

@@ -1,5 +1,5 @@
 from fedn.utils.kerashelper import KerasHelper
-from models.casa_model import create_seed_model
+from models.csd_model import create_seed_model
 
 if __name__ == '__main__':
 
