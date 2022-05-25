@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="767ce94e-3821-43bf-b284-0b3d6a615822" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/init_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/models/casa_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/models/csd_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/read_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/validate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initial_model/initial_model.npz" beforeDir="false" afterPath="$PROJECT_DIR$/initial_model/initial_model.npz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package/package.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653405293551</updated>
       <workItem from="1653405297191" duration="51000" />
-      <workItem from="1653462206051" duration="676000" />
+      <workItem from="1653462206051" duration="1149000" />
     </task>
     <servers />
   </component>
