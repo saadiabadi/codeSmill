@@ -25,13 +25,13 @@ def read_data(filename):
     print(pkd.shape)
     x = pkd[:, :16]
     y = pkd[:, 16:]
-    # _, X, _, Y  = train_test_split(x, y,test_size=settings['test_size'])
+    _, X, _, Y  = train_test_split(x, y,test_size=0.25) #settings['test_size'])
 
     # reshaped the input data for LSTM model
-    # X = X.reshape(X.shape[0], 1, X.shape[1])
-    x = x.reshape(x.shape[0], 1, x.shape[1])
+    X = X.reshape(X.shape[0], 1, X.shape[1])
+    # x = x.reshape(x.shape[0], 1, x.shape[1])
 
-    return x, y
+    return X, Y
 
 
 def train(model,data, settings):

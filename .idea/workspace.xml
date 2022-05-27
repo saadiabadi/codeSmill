@@ -4,6 +4,18 @@
     <list default="true" id="767ce94e-3821-43bf-b284-0b3d6a615822" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/validate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/fabiano/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/fabiano/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/fontana/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/fontana/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/khaled/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/khaled/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.dev.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.dev.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra-hosts.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/extra-hosts.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package/package.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653405293551</updated>
       <workItem from="1653405297191" duration="51000" />
-      <workItem from="1653462206051" duration="1149000" />
+      <workItem from="1653462206051" duration="4012000" />
     </task>
     <servers />
   </component>
@@ -57,5 +69,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/client/train.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

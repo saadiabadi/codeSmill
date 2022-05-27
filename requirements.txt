@@ -1,7 +1,5 @@
-numpy
-tensorflow<2.6.0
+tensorflow
 sklearn
 flask
 minio
-pandas
 ttictoc

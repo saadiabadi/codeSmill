@@ -9,3 +9,24 @@ services:
    client3:
      extra_hosts:
        combiner: 130.238.29.60
+   client4:
+     extra_hosts:
+       combiner: 130.238.29.60
+   client5:
+     extra_hosts:
+       combiner: 130.238.29.60
+   client6:
+     extra_hosts:
+       combiner: 130.238.29.60
+   client7:
+     extra_hosts:
+       combiner: 130.238.29.60
+   client8:
+     extra_hosts:
+       combiner: 130.238.29.60
+   client9:
+     extra_hosts:
+       combiner: 130.238.29.60
+   client10:
+     extra_hosts:
+       combiner: 130.238.29.60

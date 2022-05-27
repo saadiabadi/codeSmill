@@ -7,9 +7,9 @@ services:
     build:
       context: .
     working_dir: /app
-    command: /bin/bash -c "fedn run client -in client.yaml --name fabiano"
+    command: /bin/bash -c "fedn run client -in client.yaml --name company1"
     volumes:
-      - ./data/fabiano:/app/data
+      - ./data/company0:/app/data
       - ./client.yaml:/app/client.yaml
   client2:
     environment:
@@ -18,9 +18,9 @@ services:
     build:
       context: .
     working_dir: /app
-    command: /bin/bash -c "fedn run client -in client.yaml --name fontana"
+    command: /bin/bash -c "fedn run client -in client.yaml --name company2"
     volumes:
-      - ./data/fontana:/app/data
+      - ./data/company1:/app/data
       - ./client.yaml:/app/client.yaml
 
   client3:
@@ -30,7 +30,84 @@ services:
     build:
       context: .
     working_dir: /app
-    command: /bin/bash -c "fedn run client -in client.yaml --name khaled"
+    command: /bin/bash -c "fedn run client -in client.yaml --name company3"
     volumes:
-      - ./data/khaled:/app/data
+      - ./data/company2:/app/data
+      - ./client.yaml:/app/client.yaml
+  client4:
+    environment:
+      - GET_HOSTS_FROM=dns
+    image: "codesmill:latest"
+    build:
+      context: .
+    working_dir: /app
+    command: /bin/bash -c "fedn run client -in client.yaml --name company4"
+    volumes:
+      - ./data/company3:/app/data
+      - ./client.yaml:/app/client.yaml
+  client5:
+    environment:
+      - GET_HOSTS_FROM=dns
+    image: "codesmill:latest"
+    build:
+      context: .
+    working_dir: /app
+    command: /bin/bash -c "fedn run client -in client.yaml --name company5"
+    volumes:
+      - ./data/company4:/app/data
+      - ./client.yaml:/app/client.yaml
+  client6:
+    environment:
+      - GET_HOSTS_FROM=dns
+    image: "codesmill:latest"
+    build:
+      context: .
+    working_dir: /app
+    command: /bin/bash -c "fedn run client -in client.yaml --name company6"
+    volumes:
+      - ./data/company5:/app/data
+      - ./client.yaml:/app/client.yaml
+  client7:
+    environment:
+      - GET_HOSTS_FROM=dns
+    image: "codesmill:latest"
+    build:
+      context: .
+    working_dir: /app
+    command: /bin/bash -c "fedn run client -in client.yaml --name company7"
+    volumes:
+      - ./data/company6:/app/data
+      - ./client.yaml:/app/client.yaml
+  client8:
+    environment:
+      - GET_HOSTS_FROM=dns
+    image: "codesmill:latest"
+    build:
+      context: .
+    working_dir: /app
+    command: /bin/bash -c "fedn run client -in client.yaml --name company8"
+    volumes:
+      - ./data/company7:/app/data
+      - ./client.yaml:/app/client.yaml
+  client9:
+    environment:
+      - GET_HOSTS_FROM=dns
+    image: "codesmill:latest"
+    build:
+      context: .
+    working_dir: /app
+    command: /bin/bash -c "fedn run client -in client.yaml --name company9"
+    volumes:
+      - ./data/company8:/app/data
+      - ./client.yaml:/app/client.yaml
+  client10:
+    environment:
+      - GET_HOSTS_FROM=dns
+    image: "codesmill:latest"
+    build:
+      context: .
+    working_dir: /app
+    command: /bin/bash -c "fedn run client -in client.yaml --name company10"
+    volumes:
+      - ./data/company9:/app/data
       - ./client.yaml:/app/client.yaml
