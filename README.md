@@ -3,9 +3,9 @@ This classsic example of code smell detection is well suited both as a lightweig
 
 The example is also useful for general scalability tests in fully distributed mode,  please check the following papers for more details about the dataset.
 
-1- Arcelli Fontana, F., Mäntylä, M. V., Zanoni, M., & Marino, A. (2016). Comparing and experimenting machine learning techniques for code smell detection. Empirical Software Engineering, 21, 1143-1191.
-2- Pecorelli, F., Di Nucci, D., De Roover, C., & De Lucia, A. (2020). A large empirical assessment of the role of data balancing in machine-learning-based code smell detection. Journal of Systems and Software, 169, 110693.
-3- Alkharabsheh, K., Crespo, Y., Fernández-Delgado, M., Cotos, J. M., & Taboada, J. A. (2019). Assessing the influence of size category of the project in god class detection, an experimental approach based on machine learning (MLA). In International Conference on Software Engineering & Knowledge Engineering (pp. 361-366).
+1. Arcelli Fontana, F., Mäntylä, M. V., Zanoni, M., & Marino, A. (2016). Comparing and experimenting machine learning techniques for code smell detection. Empirical Software Engineering, 21, 1143-1191.
+2. Pecorelli, F., Di Nucci, D., De Roover, C., & De Lucia, A. (2020). A large empirical assessment of the role of data balancing in machine-learning-based code smell detection. Journal of Systems and Software, 169, 110693.
+3. Alkharabsheh, K., Crespo, Y., Fernández-Delgado, M., Cotos, J. M., & Taboada, J. A. (2019). Assessing the influence of size category of the project in god class detection, an experimental approach based on machine learning (MLA). In International Conference on Software Engineering & Knowledge Engineering (pp. 361-366).
 
 
 ## Provide local training and test data
