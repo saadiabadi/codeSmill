@@ -1,9 +1,9 @@
 # Code Smell Detection example - Keras version
-This classsic example of code smell detection is well suited both as a lightweight test when learning FEDn and developing on FEDn in psedo-distributed mode. A normal high-end laptop or a workstation should be able to sustain several clients. 
+This classic example of code smell detection is well suited as a lightweight test when learning FEDn and developing on FEDn in pseudo-distributed mode. A normal high-end laptop or a workstation should be able to sustain several clients. 
 
-The example is also useful for general scalability tests in fully distributed mode,  please check the following papers for more details about the dataset.
+The example is also useful for general scalability tests in fully distributed mode; please check the following papers for more details about the dataset.
 
-1. Arcelli Fontana, F., Mäntylä, M. V., Zanoni, M., & Marino, A. (2016). Comparing and experimenting machine learning techniques for code smell detection. Empirical Software Engineering, 21, 1143-1191.
+1. Arcelli Fontana, F., Mäntylä, M. V., Zanoni, M., & Marino, A. (2016). Comparing and experimenting with machine learning techniques for code smell detection. Empirical Software Engineering, 21, 1143-1191.
 2. Pecorelli, F., Di Nucci, D., De Roover, C., & De Lucia, A. (2020). A large empirical assessment of the role of data balancing in machine-learning-based code smell detection. Journal of Systems and Software, 169, 110693.
 3. Alkharabsheh, K., Crespo, Y., Fernández-Delgado, M., Cotos, J. M., & Taboada, J. A. (2019). Assessing the influence of size category of the project in god class detection, an experimental approach based on machine learning (MLA). In International Conference on Software Engineering & Knowledge Engineering (pp. 361-366).
 
@@ -17,35 +17,42 @@ python create_data_partitions.py
 ```
 
 
-2. To run the experiment correctly you should use and download FEDn Release v0.3.3b1 from the following link
+2. To run the experiment correctly, you should use and download FEDn Release v0.3.3b1 from the following link
 
 ```
 https://github.com/scaleoutsystems/fedn/releases/tag/v0.3.3b1
 ```
 
+For more details about how to install and configure FEDn, please check the following FEDn documentation.
+
+```
+https://fedn.readthedocs.io/en/stable/
+```
+
+
 
 
 ## Configuring the Reducer  
-Navigate to 'https://localhost:8090' (or the url of your Reducer) and follow instructions to upload the compute package in 'package/package.tar.gz' and the initial model in 'initial_model/initial_model.npz'. 
+Navigate to 'https://localhost:8090' (or the URL of your Reducer) and follow the instructions to upload the compute package in 'package/package.tar.gz' and the initial model in 'initial_model/initial_model.npz'. 
 
 ## Creating a compute package
-Whenever you make updates to the client code (such as altering any of the settings in the above mentioned file), you need to re-package the compute package:
+Whenever you make updates to the client code (such as altering any of the settings in the above-mentioned file), you need to re-package the computing package:
 
 ```bash
 tar -czvf package.tar.gz client
 ```
 To clear the system and set a new compute package, see: https://github.com/scaleoutsystems/fedn/blob/master/docs/FAQ.md
 
-For an explaination of the compute package structure and content: https://github.com/scaleoutsystems/fedn/blob/develop/docs/tutorial.md
+For an explanation of the compute package structure and content: https://github.com/scaleoutsystems/fedn/blob/develop/docs/tutorial.md
  
 ## Creating a new initial model
-The baseline model (LSTM) is specified in the file 'client/init_model.py'. This script creates an untrained neural network and serializes that to a file.  If you wish to alter the initial model, edit 'init_model.py' and 'models/imdb_model.py' then regenerate the initial model file (install dependencies as needed, see requirements.txt):
+The baseline model (LSTM) is specified in the file 'client/init_model.py'. This script creates an untrained neural network and serializes that to a file.  If you wish to alter the initial model, edit 'init_model.py' and 'models/imdb_model.py', then regenerate the initial model file (install dependencies as needed, see requirements.txt):
 
 ```bash
 python init_model.py 
 ```
 ### Configuring the client
-We have made it possible to configure a couple of settings to vary the conditions for the training. These configurations are expsosed in the file 'settings.yaml': 
+We have made it possible to configure a couple of settings to vary the conditions for the training. These configurations are exposed in the file 'settings.yaml': 
 
 ```yaml 
 # Parameters for local training
